@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta charset="utf-8" />
+		<!-- Search Engine Optimization -->
+		<meta name="author" content="Ji Hoon Kim">
+		<meta name="description" content="Ji Hoon's tech blog is a space for sharing technology related to computer science and posting personal daily lives.">
+		
+		<style>	
+				@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+				#logoWide, #logoMedium, #logoNarrow, #rhceJpg, #rhcePng {display: none;}
+		</style>	
+		
+		<!-- CSS -->
+		<link rel="stylesheet" media="screen and (min-width:1024px)" href="wide.css" />
+		<link rel="stylesheet" media="screen and (min-width:641px) and (max-width:1023px)" href="medium.css" />
+		<link rel="stylesheet" media="screen and (max-width:640px)" href="narrow.css" />
+		
+		<!-- Java Script -->
+		
+		<script type="text/javascript" src="src/purify.js">
+		</script>
+
+		<title>Ji Hoon's Tech Blog !</title>
+		<link rel="author" href="https://linkedin.com/in/jihoon-john-kim/">
+</head>
+
+<body>
+		<header class="wrapperHead">
+				<!--home logo-->
+				<section class="logo">
+				<a href="home.html">
+					<img id="logoWide" src="images/logo.png" alt="home">
+					<img id="logoMedium" src="images/logo.png" alt="home">
+					<img id="logoNarrow" src="images/logo.png" alt="home">
+				</a>
+				</section>
+	
+				<!--welcome Headline-->
+				<h1 class="welcomeHeadline">&nbsp;&nbsp;Native Dialogs</h1>
+		
+		<!--menu bar-->
+		<nav class="menu">
+			<a href="nativedialogs.html">Nat.</a>
+			<a href="customdialogs.html">Cus.</a>
+			<a href="crud.html">CRUD</a>
+			<a href="customcrud.html">cusCRUD</a>
+			<a href="resume.html">resume</a>
+			<a href="blog.html">blog</a>
+			<a href="contact.html">contact</a>
+		</nav>
+
+		<!--search-->
+		<section class="search">
+		<input list="featured" type="search" id="mySearch" name="q">
+			<datalist id="featured">
+				<option value="Resume">
+				<option value="Daily">
+				<option value="Tech Study">
+			</datalist>
+		<button>Search</button>
+		</section>
+	</header>
+
+	<main>
+			<input type="button" id="Alert" value="Alert">
+			<input type="button" id="Confirm" value="Confirm">
+			<input type="button" id="Prompt" value="Prompt">
+			<input type="button" id="Safer Prompt" value="Safer Prompt">
+			<h1>
+				<output id="show"></output>
+			</h1>
+
+			<script>
+				const onClickClearAlert = () => {
+					document.getElementById("show").innerText = "";
+					setTimeout(() => onClickAlert(),300);
+				}
+				const onClickAlert = () => { 
+					alert(`Alert!!! A nuclear missile launch has been detected!!!`);
+					
+				}
+				
+				const onClickClearConfirm = () => {
+					document.getElementById("show").innerText = "";
+					setTimeout(() => onClickConfirm(),300);
+				}
+				const onClickConfirm = () => { 
+					const answer = confirm(`Are you sure you authorized a nuclear missile launch?`);
+					if(answer){
+						document.getElementById("show").innerText = `The value returned by the confirm method is: ${answer}
+						Yes! The world will be ruined now.`;
+					}
+					else{
+						document.getElementById("show").innerText = `The value returned by the confirm method is: ${answer}
+						Oh, it's too late.\n Cancellation of launch is impossible.`;
+					}
+				}
+				
+				const onClickClearPrompt = () => {
+					document.getElementById("show").innerText = "";
+					setTimeout(() => onClickPrompt(),300);
+				}
+				const onClickPrompt = () => { 
+					const will = prompt(`What do you want to say before you die?`,`Our father in heaven,,,`);
+					if(will==""){
+						alert(`I'll give you one more chance for your last words.`);
+						return onClickPrompt();
+					}
+					else if(will){
+						document.getElementById("show").innerText = `The last message of mankind is as follows. 
+						"${will}  (RIP, passed away)"`;
+					}
+					else{
+						document.getElementById("show").innerText = `User didn't enter anything.
+						The last individual of mankind became a handful of ashes without leaving any words.`;
+					}
+				}
+				
+				const onClickClearSafer = () => {
+					document.getElementById("show").innerText = "";
+					setTimeout(() => onClickSafer(),300);
+				}
+				const onClickSafer = () => { 
+					alert(`You've got DomPurify!!!`);
+					var will = prompt(`What do you want to say before you die?`,`Our father in heaven,,,`);
+					//let clean = DOMPurify.sanitize(will);
+					if(will==""){
+						alert(`I'll give you one more chance for your last words.`);
+						return onClickPrompt();
+					}
+					else if(will){
+						document.getElementById("show").innerText = `The last message of mankind is as follows.
+						"${will}  (RIP, passed away)"`;
+					}
+					else{
+						document.getElementById("show").innerText = `User didn't enter anything.
+						The last individual of mankind became a handful of ashes without leaving any words.`;
+					}
+				}
+					
+				document.getElementById("Alert").addEventListener('click', onClickClearAlert);
+				document.getElementById("Confirm").addEventListener('click', onClickClearConfirm);
+				document.getElementById("Prompt").addEventListener('click', onClickClearPrompt);
+				document.getElementById("Safer Prompt").addEventListener('click', onClickClearSafer);
+			
+			</script>
+	</main>
+
+	<footer>
+		<!--contact-->    
+		<section>
+		<h2 style="color:maroon">Contact</h2>
+			<pre>    LinkedIn  <a href="https://linkedin.com/in/jihoon-john-kim/">linkedin.com/in/jihoon-john-kim/</a></pre>
+			<pre>    E-mail    chunikjh@gmail.com</pre>
+			<pre>    Phone     909 969 3637</pre>
+			<pre>    Github    <a href="https://github.com/chunikjh">github.com/chunikjh</a></pre>   
+		<p>Copyright 2022. Ji Hoon Kim, all rights reserved.</p>
+		<ol>
+			<li>Attribution</li>
+			<li>Noncommercial</li>
+			<li>Share Alike</li>
+		</ol>
+		</section>
+	</footer>
+</body>
+</html>
+
+<!-- , , , , , , , , 
+, , , , , , , , , , , 
+, , , , , , , , , , , , , 
+, , , , svg* ul, , , , , , 
+, , , , , , , , 
+, , , , , , , , , , ,  -->
+
+<!-- html, head, title, meta, link, script*, style*, body, 
+main, h1, h2, h3, p, section, header, footer, aside, nav, div, 
+span, br, b, i, strong, em, code, pre, hr, a, img, picture, iframe, 
+audio, video, source, canvas*, svg* ul, ol, optgroup, li, form, label, 
+fieldset, legend, input, textarea, datalist, select, option, details, 
+summary, button, template, table, tr, td, th, caption, col, colgroup, figure, figcaption -->

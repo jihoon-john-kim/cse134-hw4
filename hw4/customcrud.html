@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta charset="utf-8" />
+		<!-- Search Engine Optimization -->
+		<meta name="author" content="Ji Hoon Kim">
+		<meta name="description" content="Ji Hoon's tech blog is a space for sharing technology related to computer science and posting personal daily lives.">
+		
+		<style>	
+				@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+				#logoWide, #logoMedium, #logoNarrow, #rhceJpg, #rhcePng {display: none;}
+		</style>	
+		
+		<!-- CSS -->
+		<link rel="stylesheet" media="screen and (min-width:1024px)" href="wide.css" />
+		<link rel="stylesheet" media="screen and (min-width:641px) and (max-width:1023px)" href="medium.css" />
+		<link rel="stylesheet" media="screen and (max-width:640px)" href="narrow.css" />
+		
+		<!-- Java Script -->
+		<script defer type="text/javascript" src="customblog.js"></script>
+
+		<title>Ji Hoon's Tech Blog !</title>
+		<link rel="author" href="https://linkedin.com/in/jihoon-john-kim/">
+</head>
+
+<body>
+		<header class="wrapperHead">
+				<!--home logo-->
+				<section class="logo">
+				<a href="home.html">
+					<img id="logoWide" src="images/logo.png" alt="home">
+					<img id="logoMedium" src="images/logo.png" alt="home">
+					<img id="logoNarrow" src="images/logo.png" alt="home">
+				</a>
+				</section>
+	
+				<!--welcome Headline-->
+				<h1 class="welcomeHeadline">&nbsp;&nbsp;custom CRUD Dialogs</h1>
+		
+		<!--menu bar-->
+		<nav class="menu">
+			<a href="nativedialogs.html">Nat.</a>
+			<a href="customdialogs.html">Cus.</a>
+			<a href="crud.html">CRUD</a>
+			<a href="customcrud.html">cusCRUD</a>
+			<a href="resume.html">resume</a>
+			<a href="blog.html">blog</a>
+			<a href="contact.html">contact</a>
+		</nav>
+
+		<!--search-->
+		<section class="search">
+		<input list="featured" type="search" id="mySearch" name="q">
+			<datalist id="featured">
+				<option value="Resume">
+				<option value="Daily">
+				<option value="Tech Study">
+			</datalist>
+		<button>Search</button>
+		</section>
+	</header>
+
+	<main>
+				<dialog id="crudDialog">
+						<form method="dialog">
+							<p><label>Target to Nuke:
+							<br><br>
+							<label for="target">Target </label>
+								<select id="target">
+									<option>US</option>
+									<option>Russia</option>
+									<option>China</option>
+									<option>India</option>
+								</select>
+							<br><br>
+							<label for="date">Date </label>
+							<input type="date" required id="date" value="2022-08-08">
+							<br><br>
+							<label for="magnitude">Magnitude </label>
+								<select id="magnitude">
+									<option>100 kt</option>
+									<option>500 kt</option>
+									<option>1000 kt</option>
+								</select>
+							<br><br>
+							</label></p>
+
+							<menu>
+								<button type="submit" id="launch">Launch</button>
+								<button type="submit" id="cancel" formnovalidate="formnovalidate">Cancel</button>
+							</menu>
+						</form>
+					</dialog>
+
+					<menu>
+					<h1>Nuke List</h1>
+					  <input type="button" id="upload" value="Add to List"></input>
+						<ul id="nukeList">
+						</ul>
+					</menu>
+
+										
+				<dialog id="editDialog">
+						<form method="dialog">
+							<p><label>Nuke List EDIT!:
+							<br><br>
+							<label for="target">Target </label>
+								<select id="targetE">
+									<option value="US">US</option>
+									<option value="Russia">Russia</option>
+									<option value="China">China</option>
+									<option value="India">India</option>
+								</select>
+							<br><br>
+							<label for="date">Date </label>
+							<input type="date" required id="dateE" value="2022-08-08">
+							<br><br>
+							<label for="magnitude">Magnitude </label>
+								<select id="magnitudeE">
+									<option value="100 kt">100 kt</option>
+									<option value="500 kt">500 kt</option>
+									<option value="1000 kt">1000 kt</option>
+								</select>
+							<br><br>
+							</label></p>
+
+							<menu>
+								<button type="submit" id="edit">Edit</button>
+								<button type="submit" id="cancel" formnovalidate="formnovalidate">Cancel</button>
+							</menu>
+						</form>
+					</dialog>
+
+					<dialog id="delDialog">
+						<form method="dialog">
+							<p><label>Delete? Really??
+							<br><br>							
+							</label></p>
+							<menu>
+								<button type="submit" id="del">Delete</button>
+								<button type="cancel" id="cancel" formnovalidate="formnovalidate">Cancel</button>
+							</menu>
+						</form>
+					</dialog>
+					
+					
+	</main>
+
+	<footer>
+		<!--contact-->    
+		<section>
+		<h2 style="color:maroon">Contact</h2>
+			<pre>    LinkedIn  <a href="https://linkedin.com/in/jihoon-john-kim/">linkedin.com/in/jihoon-john-kim/</a></pre>
+			<pre>    E-mail    chunikjh@gmail.com</pre>
+			<pre>    Phone     909 969 3637</pre>
+			<pre>    Github    <a href="https://github.com/chunikjh">github.com/chunikjh</a></pre>   
+		<p>Copyright 2022. Ji Hoon Kim, all rights reserved.</p>
+		<ol>
+			<li>Attribution</li>
+			<li>Noncommercial</li>
+			<li>Share Alike</li>
+		</ol>
+		</section>
+	</footer>
+</body>
+</html>
+
+<!-- , , , , , , , , 
+, , , , , , , , , , , 
+, , , , , , , , , , , , , 
+, , , , svg* ul, , , , , , 
+, , , , , , , , 
+, , , , , , , , , , ,  -->
+
+<!-- html, head, title, meta, link, script*, style*, body, 
+main, h1, h2, h3, p, section, header, footer, aside, nav, div, 
+span, br, b, i, strong, em, code, pre, hr, a, img, picture, iframe, 
+audio, video, source, canvas*, svg* ul, ol, optgroup, li, form, label, 
+fieldset, legend, input, textarea, datalist, select, option, details, 
+summary, button, template, table, tr, td, th, caption, col, colgroup, figure, figcaption -->
